@@ -3,25 +3,31 @@ import usePokemonStore from "../../zustand/useStore";
 import "./Pagination.css";
 
 const Pagination = ({ totalCount, itemsPerPage = 30 }) => {
+  // Current page state comes from Zustand
   const { currentPage, setCurrentPage } = usePokemonStore();
+
+  // Calculate total pages based on number of items
   const totalPages = Math.ceil(totalCount / itemsPerPage);
 
-  if (totalPages <= 1) return null; // no pagination needed
+  // If only one page exists, no pagination is needed
+  if (totalPages <= 1) return null;
 
-  const pageNumbers = []; // we will store page numbers + "..." here
+  // This array will store page numbers and "..." placeholders
+  const pageNumbers = [];
 
-  const delta = 2; // how many pages to show around current page
+  // Number of pages to show around the current page
+  const delta = 2;
 
-  // Loop through all pages
+  // Generate pagination numbers
   for (let i = 1; i <= totalPages; i++) {
     if (
-      i === 1 || // always show first page
-      i === totalPages || // always show last page
-      (i >= currentPage - delta && i <= currentPage + delta) // pages near current
+      i === 1 || // always include the first page
+      i === totalPages || // always include the last page
+      (i >= currentPage - delta && i <= currentPage + delta) // include pages around current page
     ) {
       pageNumbers.push(i);
     } else {
-      // check if previous item is not "..." to avoid duplicates
+      // Insert "..." only if the last pushed item is not already "..."
       if (pageNumbers[pageNumbers.length - 1] !== "...") {
         pageNumbers.push("...");
       }
@@ -30,7 +36,7 @@ const Pagination = ({ totalCount, itemsPerPage = 30 }) => {
 
   return (
     <div className="pagination-wrapper">
-      {/* Prev button */}
+      {/* Previous button */}
       <button
         onClick={() => setCurrentPage(currentPage - 1)}
         disabled={currentPage === 1}
@@ -39,7 +45,7 @@ const Pagination = ({ totalCount, itemsPerPage = 30 }) => {
         Prev
       </button>
 
-      {/* Page buttons */}
+      {/* Page buttons and ellipsis */}
       {pageNumbers.map((num, idx) => {
         if (num === "...") {
           return (
