@@ -1,0 +1,87 @@
+.filter-bar {
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+}
+
+.filter-bar h5 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 12px;
+}
+
+.app-container.dark .filter-bar h5 {
+  color: #fff;
+}
+
+.filter-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+  max-width:1000px; /* control how wide the whole filter bar is */
+  margin: 0 auto 10px auto; /* center horizontally */
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background: #ffffff;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn:hover {
+  background: #f0f4ff;
+  color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.15);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #007bff, #3399ff);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.clear-btn {
+  margin-top: 10px;
+  padding: 7px 16px;
+  background: linear-gradient(135deg, #ff4d4d, #dc3545);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+}
+
+.clear-btn:hover {
+  background: linear-gradient(135deg, #e63946, #b82e3a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
+
+.filter-btn.normal { background: #a8a77a; }
+.filter-btn.fire { background: #ee8130; }
+.filter-btn.water { background: #6390f0; }
+.filter-btn.electric { background: #f7d02c; color: #333; }
+.filter-btn.grass { background: #7ac74c; }
+.filter-btn.ice { background: #96d9d6; color: #333; }
+.filter-btn.fighting { background: #c22e28; }
+.filter-btn.poison { background: #a33ea1; }
+.filter-btn.ground { background: #e2bf65; color: #333; }
+.filter-btn.flying { background: #a98ff3; }
+.filter-btn.psychic { background: #f95587; }
+.filter-btn.bug { background: #a6b91a; }
+.filter-btn.rock { background: #b6a136; }
+.filter-btn.ghost { background: #735797; }
+.filter-btn.dragon { background: #6f35fc; }
+.filter-btn.dark { background: #705746; }
+.filter-btn.steel { background: #b7b7ce; color: #333; }
+.filter-btn.fairy { background: #d685ad; }

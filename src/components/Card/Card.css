@@ -1,0 +1,79 @@
+.pokemon-card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  height: 220px;          /* fixed card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;      /* light background */
+
+}
+
+.card-image-top {
+  width: 120px;           /* fixed width */
+  height: 120px;          /* fixed height */
+  object-fit: contain;    /* keeps proportions, no stretching */
+  margin: 0 auto;         /* center horizontally */
+}
+
+.card-title {
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.pokemon-card-link {
+  text-decoration: none;  /* remove underline */
+  color: inherit;         /* keep normal text color */
+  display: block;         /* make sure the link wraps the card nicely */
+}
+.pokemon-card-link:hover {
+  text-decoration: none;
+}
+
+
+
+.app-container.dark .pokemon-card {
+  background: #4c4c4c;     
+  border: 1px solid #666;
+  color: #fff;           
+}
+
+.card-types {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.type-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* 🎨 Simple type colors */
+.type-fire { background: #f08030; }
+.type-water { background: #6890f0; }
+.type-grass { background: #78c850; }
+.type-electric { background: #f8d030; color: #333; }
+.type-psychic { background: #f85888; }
+.type-ice { background: #98d8d8; }
+.type-dragon { background: #7038f8; }
+.type-dark { background: #705848; }
+.type-fairy { background: #ee99ac; }
+.type-poison { background: #a040a0; }
+.type-ground { background: #e0c068; }
+.type-rock { background: #b8a038; }
+.type-bug { background: #a8b820; }
+.type-flying { background: #a890f0; }
+.type-fighting { background: #c03028; }
+.type-steel { background: #b8b8d0; }
+.type-ghost { background: #705898; }
+.type-normal { background: #a8a878; }

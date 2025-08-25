@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #def;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.app-container.dark{
+  background: #343434;
+}
+
+.card,
+.card-body,
+h5,
+h4,
+h3,
+p {
+  margin-bottom: 0 !important;
+}
+
+.container {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}

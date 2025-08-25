@@ -1,0 +1,61 @@
+.favourite-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: background 0.3s ease;
+}
+
+.app-container.dark .favourite-page {
+  background: linear-gradient(135deg, #2b2b2b 0%, #3a3a3a 100%);
+  color: #fff;
+}
+
+.fav-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ff4747;
+}
+
+.app-container.dark .fav-title {
+  color: #ffd447;
+}
+
+.favourite-grid {
+  display: flex;
+  flex-wrap: wrap;         /* allow items to wrap to next row */
+  justify-content: center; /* center items horizontally */
+  gap: 1.5rem;             /* spacing between cards */
+  margin-top: 2rem;
+}
+
+.fav-card-wrapper {
+  flex: 0 1 220px; /* grow = 0, shrink = 1, basis = 220px */
+  max-width: 250px;
+  transform: scale(1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fav-card-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.empty-state img {
+  width: 96px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,270 @@
+.detail-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.app-container.dark .detail-page {
+  background: #454545;
+  color: #fff;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  color: #444343;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.app-container.dark .title {
+  color: #ebebeb;
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* left small, right big */
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.detail-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail-right,
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pokemon-img {
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.app-container.dark .back-btn {
+  color: #80bfff;
+}
+
+/* Favourite + Shiny Buttons */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.fav-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.fav-btn.add {
+  background: #ffffc4;
+  color: #b3001b;
+}
+
+.fav-btn.remove {
+  background: #ffad90;
+  color: #484848;
+}
+
+.shiny-btn {
+  background: #dedeff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.shiny-btn:hover { background: #c0c0ff; }
+
+/* Info sections */
+.info-section {
+  margin-bottom: 1.5rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.app-container.dark .info-section {
+  background: #313131;
+}
+
+.info-section h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+/* Stats */
+.stats-list {
+  list-style: none;
+  padding: 0;
+}
+
+.stats-list li {
+  display: flex;
+  align-items: center;
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.stat-name {
+  width: 100px;
+  text-transform: capitalize;
+}
+
+.stat-bar {
+  flex: 1;
+  background: #eee;
+  border-radius: 6px;
+  margin: 0 0.6rem;
+  height: 10px;
+  overflow: hidden;
+}
+
+.stat-bar .bar-fill {
+  height: 100%;
+  background: #4caf50;
+  border-radius: 6px;
+}
+
+.stat-value {
+  min-width: 30px;
+  text-align: right;
+}
+
+/* Type Badges */
+.types {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.type-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* Example type colors */
+.type-badge.fire { background: #f08030; }
+.type-badge.water { background: #6890f0; }
+.type-badge.grass { background: #78c850; }
+.type-badge.electric { background: #f8d030; }
+.type-badge.psychic { background: #f85888; }
+.type-badge.ice { background: #98d8d8; }
+.type-badge.dragon { background: #7038f8; }
+.type-badge.dark { background: #705848; }
+.type-badge.fairy { background: #ee99ac; }
+.type-badge.normal { background: #a8a878; }
+.type-badge.fighting { background: #c03028; }
+.type-badge.ground { background: #e0c068; }
+.type-badge.rock { background: #b8a038; }
+.type-badge.bug { background: #a8b820; }
+.type-badge.ghost { background: #705898; }
+.type-badge.steel { background: #b8b8d0; }
+.type-badge.poison { background: #a040a0; }
+.type-badge.flying { background: #a890f0; }
+
+/* Evolution */
+.evolution-chain {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.evo-card {
+  text-align: center;
+  background: #fafafa;
+  padding: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 120px;
+}
+
+.evo-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.edit-form input,
+.edit-form textarea {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.edit-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.save-btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.save-btn:hover {
+  background: #43a047;
+}
+
+.app-container.dark .edit-form input,
+.app-container.dark .edit-form textarea {
+  background: #555;
+  color: #fff;
+  border: 1px solid #bcbcbc;
+}
+
+.app-container.dark .save-btn {
+  background: #81c784;
+  color: #222;
+}
